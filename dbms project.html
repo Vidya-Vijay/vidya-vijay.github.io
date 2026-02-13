@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets\css\project.css" />
+		</head>
+    
+<body>
+<div class="container">
+<header>
+  <h1>Chemical Production Plant Management System</h1>
+  <p>A SQL-based database system for managing chemical production plant operations</p>
+</header>
+
+<p><strong>Course:</strong> COMP 230 – Databases and Database Management Systems <br>
+  
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    This project involved designing and implementing a relational database system to manage operations in a chemical production plant. 
+    The system streamlined production batch scheduling, raw material inventory tracking, customer order processing, and payment management.
+    Built to support roles like plant managers, QA, and inventory teams, this project showcased end-to-end DBMS skills.
+  </p>
+</section>
+
+<section>
+  <h2>Tools & Techniques</h2>
+  <ul>
+    <li>MySQL Database</li>
+    <li>phpMyAdmin for database interface</li>
+    <li>SQL: Data Definition Language (DDL), Data Manipulation Language (DML) </li>
+    <li>Entity Relationship Diagram (ERD) and Normalization</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Key Features</h2>
+  <ul>
+    <li><strong>Normalized Schema Design:</strong> Created 10+ interrelated tables in 2NF with clear functional dependencies to reduce redundancy and ensure integrity.</li>
+    <li><strong>Entity Relationship Diagram:</strong> Mapped entities like Raw_Material, Supplier, Product, Order, Customer, and Payment using Chen’s notation.</li>
+    <li><strong>Relational Mapping:</strong> Used bridge tables (Product_Material, Order_Details) to model M:N relationships.</li>
+    <li><strong>DDL & Implementation: </strong>Built schema using MySQL and implemented all relationships with appropriate data types, constraints, and indexing for query efficiency.</li>
+    <li><strong>SQL Queries:</strong> Developed advanced queries using JOIN, GROUP BY, subqueries, and aggregation to generate reports on order status, raw material usage, and customer payments.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Entity Relationship Diagram (ERD) Using Chen's Notation</h2>
+  <img src="images/ERD.png" alt="Inventory Database ER Diagram" />
+  <p>ERD showing structured connections between products, orders, materials, suppliers, and employees.</p>
+</section>
+
+<section>
+  <h2>Sample Queries</h2>
+  <p>1. DDL for creating a table: <br>
+  <img src="images/DDL.png" alt="Inventory Database ER Diagram" />
+  </p>
+ 
+
+   <p>
+   1. List all production batches along with the associated raw materials: <br>
+  </p>
+ <img src="images/SQL1.png" alt="Inventory Database ER Diagram" />
+ 
+
+
+  <p>2. List the products ordered along with their order quantities and prices: <br> 
+    </p>
+    <img src="images/SQL2.png" alt="Inventory Database ER Diagram" />
+
+  <p>3. Show the details of product using the most expensive raw material: <br>
+     </p> 
+     <img src="images/SQL3.png" alt="Inventory Database ER Diagram" />
+
+  </section>
+
+<section>
+  <h2>Results & Outcomes</h2>
+  
+    <li>Achieved a fully operational MySQL-backed system for inventory control and production monitoring.</li>
+    <li>Demonstrated real-world application of relational modeling, normalization, SQL optimization, and database design principles.</li>
+    <li>Received positive feedback for completeness, performance, and clarity of schema design.</li>  
+<p>Overall, this project strengthened my practical skills in database design, normalization, and SQL optimization, while giving me hands-on experience in managing data integrity, implementing relational logic, and confidently translating business requirements into efficient, data-driven solutions.
+  </p>
+</section>
+
+
+
+
+
+<a href="index.html" class="button">← Back</a>
+</div>
+</body>
+</html>
