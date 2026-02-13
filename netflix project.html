@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets\css\project.css" />
+		</head>
+    
+<body>
+<div class="container">
+<header>
+  
+  <h1>Netflix Viewership Analysis</h1>
+  <p>Statistical insights into what drives viewer engagement on Netflix</p>
+</header>
+
+<p><strong>Course:</strong> BUS 226: Economic and Business Statistics <br>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    This project explores the factors that influence how much a show or movie is watched on Netflix. 
+    Using data from Netflix, IMDb, and Wikipedia, we analyzed 6 months of viewership trends across 240 titles using statistical techniques 
+    like multiple linear regression, ANOVA, and chi-square tests. 
+    he study aimed to support better content recommendation strategies by examining factors that impact watch time, such as IMDb ratings, awards, and global availability.
+  </p>
+</section>
+
+<section>
+  <h2>Tools & Techniques</h2>
+  <ul>
+    <li>Tools: IBM SPSS, Minitab, Microsoft Excel, Tableau</li>
+    <li>Techniques: Multiple Linear Regression, One-Way ANOVA, Two-Way ANOVA, Chi-Squared Goodness of Fit, 
+      Dummy Variable Encoding, Residual Diagnostics</li>
+   
+  </ul>
+</section>
+
+<section>
+  <h2>Key Visuals</h2>
+  <h3>Figure 1: Tableau Dashboard </h3>
+   <img src= "images/netflix tableau.png"  alt="Netflix Viewership Dashboard" />
+
+
+  <h3>Figure 2: Multiple Linear Regression Model Summary</h3>
+  <img src="images/MLR Summary netflix.png" alt="Netflix Viewership Chart" />
+  <p>Source: IBM SPSS Statistics 29.0</p>
+
+  <p><strong> Regression equation for predicting viewership: </strong><br>
+    Viewership = 1291933.244 + 35611.069Duration -59371.328Awards Won + 94508.21Award Nominations + 1662751.305IMDb Rating + 18579181.59 I1Type_TV Series - 26160668.49 I2Genre_Anime -11811643.16 I3Genre_Comedy 
+    -14713809.86 I4Genre_Drama -9288035.564 I5Genre_Horror -8135748.379 I6Genre_Thriller - 4072393.401 I7Global Availability_No. <br></p>
+
+  <h3>Figure 3 : ANOVA: Interval Plot Showing Genre vs Viewership Distribution </h3>
+  <img src="images/Interval Plot netflix.png" alt="Netflix Viewership Chart" width="600" />
+  <p>Source: Minitab SSA V.01.01.2024</p>
+
+  <h3>Figure 4: Two-Way ANOVA: Interaction Effect of Type and Genre on Viewership  </h3>
+  <img src="images/Interaction effect netflix.png" alt="Netflix Viewership Chart" />
+   <p>Source: IBM SPSS Statistics 29.0</p> 
+
+   
+
+
+
+</section>
+
+<section>
+  <h2>Key Insights</h2>
+  <ul>
+    <li><strong>Regression:</strong> Viewership is positively influenced by IMDb ratings 
+	and award nominations. Type and Genre also play key roles.</li>
+  <li>R² of 0.339 suggests other unexplored factors may influence viewership.</li>
+  <li>Residual plots indicated issues with heteroscedasticity and outliers. </li>
+    <li><strong>ANOVA:</strong> Viewership varies significantly by genre — 
+	Action leads, while Anime has the lowest average.</li>
+  <li>Action was the most preferred genre, followed by Thriller and Horror.</li>
+    <li><strong>Two-Way ANOVA:</strong> Type (Movie vs. Series) and Genre 
+	both significantly affect viewership, and they interact together.</li>
+  <li>Movies were more popular than series in the observed sample</li>
+
+
+
+    <!--<li><strong>Chi-Square:</strong> There is a clear preference for Movies over Series, 
+	and for the Action genre over others.</li> -->
+  </ul>
+</section>
+
+<section>
+  <h2>Conclusion & Impact</h2>
+  <p>
+    The analysis confirms that both content type and genre significantly shape Netflix viewership. 
+    While regression models had some limitations, they still provide meaningful insight into what drives engagement. 
+	These findings can support content strategy, especially around boosting underperforming 
+	genres or promoting viewer-preferred content types.
+  </p> 
+  <p>This project strengthened my skills in statistical modeling, diagnostic test interpretation, 
+    and multivariate analysis. It provided hands-on experience in evaluating interaction effects and translating statistical results 
+    into actionable business insights. Through this analysis, I developed a deeper understanding of audience segmentation and data-driven content strategy optimization in the streaming industry.
+
+
+</p>
+</section>
+
+
+
+<a href="index.html" class="button">← Back</a>
+</div>
+</body>
+</html>
