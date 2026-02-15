@@ -11,36 +11,119 @@
 <div class="container">
 <header>
   
-  <h1>Netflix Viewership Analysis</h1>
-  <p>Statistical insights into what drives viewer engagement on Netflix</p>
+  <h1>Netflix Viewership Analysis: Driving Data-Informed Content Strategy</h1>
+  <p><i>Statistical insights into factors influencing Netflix viewer engagement, supporting better content recommendations and audience targeting.</i></p>
+
+
+<!-- Tech Tags -->
+  <div class="tags">
+    <span class="tag">SPSS</span>
+    <span class="tag">Tableau</span>
+    <span class="tag">Staistics</span>
+    <span class="tag">Regression</span>
+   
+  </div>
 </header>
 
-<p><strong>Course:</strong> BUS 226: Economic and Business Statistics <br>
 
 <section>
-  <h2>Project Overview</h2>
+  <h2>Project Summary</h2>
   <p>
-    This project explores the factors that influence how much a show or movie is watched on Netflix. 
-    Using data from Netflix, IMDb, and Wikipedia, we analyzed 6 months of viewership trends across 240 titles using statistical techniques 
-    like multiple linear regression, ANOVA, and chi-square tests. 
-    he study aimed to support better content recommendation strategies by examining factors that impact watch time, such as IMDb ratings, awards, and global availability.
+    Analyzed 6 months of Netflix viewership data across 240 titles to identify what drives engagement. 
+    Integrated IMDb ratings, award data, and global availability to uncover statistical relationships and guide content strategy decisions.
   </p>
 </section>
+
+<section>
+  <h2>Business Context</h2>
+  <p>
+    Streaming platforms like Netflix need to optimize content promotion and acquisition. 
+    Understanding which factors drive viewership helps improve recommendations, increase engagement, and allocate marketing resources effectively.
+  </p>
+</section>
+
+<section>
+  <h2>Problem Statement</h2>
+  <p>
+    Determine key drivers of Netflix content viewership, quantify their impact, and provide actionable recommendations to enhance engagement and guide content strategy.
+    
+  </p>
+</section>
+
+<section>
+  <h2>Data Sources</h2>
+  <ul>
+    <li>Netflix viewership data (6 months, 240 titles)</li>
+    <li>IMDb ratings, award wins and nominations</li>
+    <li>Global availability & metadata from Wikipedia</li>
+   
+  </ul>
+</section>
+
 
 <section>
   <h2>Tools & Techniques</h2>
   <ul>
     <li>Tools: IBM SPSS, Minitab, Microsoft Excel, Tableau</li>
-    <li>Techniques: Multiple Linear Regression, One-Way ANOVA, Two-Way ANOVA, Chi-Squared Goodness of Fit, 
-      Dummy Variable Encoding, Residual Diagnostics</li>
-   
+    <li>Techniques: Multiple Linear Regression, One-Way ANOVA, Two-Way ANOVA, Chi-Squared tests, 
+      Dummy Variable Encoding, Residual Diagnostics</li>   
   </ul>
 </section>
 
 <section>
+  <h2>Approach</h2>
+    <p>1. Cleaned and merged datasets from multiple sources</p>
+    <p>2. Explored viewership trends across type (Movie vs. Series), genre, and rating</p>  
+    <p>3. Built regression models to quantify impact of content attributes on viewership</p>  
+    <p>4. Conducted ANOVA to test differences across genres and interaction effects</p>
+    <p>5. Designed Tableau dashboards to visualize insights and trends</p>
+ </section>
+
+ <section>
+  <h2>Key Insights</h2>
+  <ul>
+    <p><strong>Regression Analysis:</strong></p>
+    <li>Positive drivers: IMDb rating, award nominations</li>   
+    <li>Type and genre significantly influence viewership</li>
+    <li>R² = 0.339 → other factors also play a role</li>
+    <li>Residual diagnostics indicated heteroscedasticity and outliers</li>
+    <p><strong>ANOVA:</strong></p>
+    <li>Action is the most-watched genre; Anime the least</li>
+    <li>Genre significantly affects viewership averages</li>
+    <p><strong>Two-Way ANOVA:</strong></p>
+    <li>Type × Genre interaction is significant: Movies outperform series in the sample</li>
+    <li>Engagement depends on content combination, not just individual attributes</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Business Recommendations</h2>
+  <li>Promote high-engagement genres like Action and Thriller in recommendations</li>
+  <li>Support underperforming genres (Anime, Comedy) with targeted campaigns or cross-genre content</li>
+  <li>Leverage award nominations & ratings to highlight content that drives viewer engagement</li>
+  <li>Optimize type/genre combination for content placement in the recommendation engine</li>
+</section>
+
+<section>
+  <h2>Conclusion & Impact</h2>
+  <p>
+    The analysis confirms that both content type and genre significantly shape Netflix viewership. 
+    While regression models had some limitations, they still provide meaningful insight into what drives engagement. 
+	These findings can support content strategy, especially around boosting underperforming 
+	genres or promoting viewer-preferred content types.
+  </p> 
+  <p>This project strengthened my skills in statistical modeling, diagnostic test interpretation, 
+    and multivariate analysis. It provided hands-on experience in evaluating interaction effects and translating statistical results 
+    into actionable business insights. Through this analysis, I developed a deeper understanding of audience segmentation and data-driven content strategy optimization in the streaming industry.
+
+  </p>
+  </section>   
+<section>
   <h2>Key Visuals</h2>
   <h3>Figure 1: Tableau Dashboard </h3>
+  <div class="image-box">
    <img src= "images/netflix tableau.png"  alt="Netflix Viewership Dashboard" />
+   </div>
 
 
   <h3>Figure 2: Multiple Linear Regression Model Summary</h3>
@@ -59,32 +142,9 @@
   <img src="images/Interaction effect netflix.png" alt="Netflix Viewership Chart" />
    <p>Source: IBM SPSS Statistics 29.0</p> 
 
-   
-
-
-
 </section>
 
-<section>
-  <h2>Key Insights</h2>
-  <ul>
-    <li><strong>Regression:</strong> Viewership is positively influenced by IMDb ratings 
-	and award nominations. Type and Genre also play key roles.</li>
-  <li>R² of 0.339 suggests other unexplored factors may influence viewership.</li>
-  <li>Residual plots indicated issues with heteroscedasticity and outliers. </li>
-    <li><strong>ANOVA:</strong> Viewership varies significantly by genre — 
-	Action leads, while Anime has the lowest average.</li>
-  <li>Action was the most preferred genre, followed by Thriller and Horror.</li>
-    <li><strong>Two-Way ANOVA:</strong> Type (Movie vs. Series) and Genre 
-	both significantly affect viewership, and they interact together.</li>
-  <li>Movies were more popular than series in the observed sample</li>
 
-
-
-    <!--<li><strong>Chi-Square:</strong> There is a clear preference for Movies over Series, 
-	and for the Action genre over others.</li> -->
-  </ul>
-</section>
 
 <section>
   <h2>Conclusion & Impact</h2>

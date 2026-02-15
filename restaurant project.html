@@ -11,50 +11,120 @@
 <body>
 <div class="container">
   <header>
-  <h1>Reviving Restaurant Sales: A Data-Driven Approach Using Predictive Analytics and Business Insights</h1>
-  <p>A predictive analytics project to support a local Thai restaurant's business turnaround</p>
+  <h1>Reviving Restaurant Revenue Using Predictive Analytics & Customer Insights</h1>
+  <p>Driving data-driven decisions for a local restaurant to improve revenue, customer satisfaction, and operational efficiency</p>
+  <!-- Tech Tags -->
+  <div class="tags">
+    <span class="tag">SQL</span>
+    <span class="tag">Power BI</span>
+    <span class="tag">Python</span>
+    <span class="tag">NLP</span>
+     <span class="tag">Regression</span>
+  </div>
+</header>
+<div class="image-box">
+<img src="images/KPI snapshot.png" alt="kpi card" /></div>
 </header>
 
-<p><strong>Course:</strong> BUS 424 – Customer Intelligence<br>
 
 <section>
-  <h2>Project Overview</h2>
+  <h2>Project Summary</h2>
   <p>
-   Partnered with a family-owned Thai restaurant in Abbotsford facing declining sales and customer satisfaction. 
-   Leveraged 313 days of structured sales, weather, and calendar data plus 400+ Google reviews to diagnose issues, 
-   predict sales, and design targeted interventions, aiming to reverse revenue decline and improve customer loyalty.
+   Partnered with a local Thai restaurant experiencing declining revenue and customer satisfaction. 
+   Conducted an end-to-end analysis using sales, weather, and customer review data to identify key performance drivers and 
+   recommend actionable strategies to improve business outcomes.
   </p>
-
 </section>
 
 <section>
-<h2>Key Features</h2>
-<u1>
-  <li>Built an end-to-end analytics solution integrating structured (POS sales, weather) and unstructured (Google reviews) datasets.</li>
-  <li>Cleaned and merged multi-source data using <strong>SQL</strong> and <strong> Python.</strong></li>
-  <li>Designed interactive <strong>Power BI</strong> dashboards with dynamic filters, KPI cards, and storytelling visuals to guide owner decisions.</li> 
-  <li>Developed a <strong>Multiple Linear Regression model (RMSE: 276.99)</strong> to predict daily revenue based on temperature, day-of-week, and holidays.</li>
-  <li>Used <strong>NLP & sentiment analysis (NLTK)</strong> to correlate customer tone with tipping behavior, identifying a 20% drop in tips following staff changes.</li>
-  <li>Created <strong>word clouds</strong> revealing “delicious” & “friendly” as loyalty drivers, while “messed” & “disappointed” flagged service gaps.</li>
-  
-</u1>
-
+  <h2>Business Context</h2>
+  <p>
+   The restaurant faced inconsistent daily revenue, declining customer satisfaction, and limited visibility into the factors 
+   influencing sales performance. Without structured analysis, decision-making relied heavily on intuition rather than data.
+  </p>
 </section>
 
 <section>
-  <h2>Tools & Techniques</h2>
+  <h2>Problem Statement</h2>
+  <p>
+   Identify the key drivers of revenue and customer experience, and develop data-driven strategies to increase sales, 
+   improve customer satisfaction, and optimize operations.
+  </p>
+</section>
+
+<section>
+<h2>Data Sources</h2>
+<ul>
+  <li>10 months of POS (Point of sales) data</li>
+  <li>400+ Google reviews</li>
+  <li>Weather and calendar data (holidays, temperature)</li>   
+</ul>
+</section>
+
+<section>
+  <h2>Tools & Methods</h2>
   <ul>
-    <li><strong>Tools:</strong> SQL, RapidMiner, Power BI(DAX, Custom themes), Python (NLTK, Pandas), Excel
-    <li><strong>Techniques:</strong> Exploratory Data Analysis (EDA), Predictive Modelling, Multiple Linear Regression (MLR), Data visualization, 
-      Natural Language Processing (NLP), Sentiment Analysis
+    <li><span><strong>SQL & Python (Pandas) </strong>- Data cleaning and integration</span> </li>
+    <li><span><strong>Power BI (DAX) </strong> - Interactive dashboard development</span> </li>
+    <li><span><strong>Regression Modeling </strong> -  Revenue prediction</span> </li>
+    <li><span><strong>NLP & Sentiment Analysis (NLTK) </strong> - Customer feedback analysis</span> </li>
       </ul>
 </section>
 
 <section>
-  <h2>Restaurant Sales Performance Dashboard Using Power BI</h2>
-  <img src="images/Power Bi restaurant.png" alt="Restaurant Dashboard Preview" />
+<h2>Approach</h2>
+<ul>
+  <li>Merged structured and unstructured data sources to create a unified dataset</li>
+  <li>Performed exploratory data analysis to identify trends and anomalies</li>
+  <li>Built a multiple linear regression model to predict daily revenue based on external factors</li>   
+  <li>Analyzed customer sentiment to understand service quality issues</li>   
+  <li>Designed an interactive dashboard to support real-time decision-making</li>
+</ul>
+</section>
 
-  <p>This interactive Power BI dashboard analyzes 30 days of restaurant performance data, including sales, tips ratings and weather. 
+<section>
+  <h2>Key Insights</h2>
+  <ul>
+    <li><span><strong>Revenue was highly influenced by external factors,</strong> 
+      with warmer temperatures and holidays significantly increasing sales.</span></li>
+    <li><span><strong>Thursdays consistently underperformed,</strong> indicating untapped demand during weekdays.</span></li>
+    <li><span>Positive reviews highlighted <strong>“friendly service” and “food quality” </strong>as key loyalty drivers.</span></li>
+    <li><span><strong>Negative feedback frequently mentioned service issues,</strong> indicating operational gaps</span></li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>Business Recommendations</h2>
+  <ul>
+    <li><strong>Increase Weekday Revenue</strong> </li>
+    <p>Introduce targeted promotions and events to boost low-performing days (e.g., Thursdays)</p>
+    <li><strong>Leverage Weather-Based Demand</strong> </li>
+    <p>Implement outdoor seating or seasonal promotions during high-temperature periods</p>
+    <li><strong>Improve Service Quality</strong> </li>
+    <p>Provide staff retraining and introduce feedback systems (e.g., QR-based surveys)</p>
+    <li><strong>Enhance Customer Experience</strong> </li>
+    <p>Focus on service consistency, as it directly impacts tipping behavior and satisfaction</p>
+    <li><strong>Use Predictive Insights for Planning </strong></li>
+    <p>Apply revenue forecasts to optimize staffing and inventory decisions</p>
+  </ul>
+  </section>
+
+<section>
+  <h2>Business Impact</h2>
+  <ul>
+    <p>The proposed strategies could:</p>
+    <li><span>Increase revenue by <strong>10–15%</strong> </span></li>
+    <li>Improve customer satisfaction and retention</li>
+    <li>Reduce operational inefficiencies through data-driven planning</li>    
+  </ul>
+</section>
+
+<section>
+  <h2>Restaurant Sales Performance Dashboard Using Power BI</h2>
+  <div class="image-box">
+  <img src="images/Power Bi restaurant.png" alt="Restaurant Dashboard Preview" /></div>
+
+  <p>This interactive Power BI dashboard analyzes 10 months of restaurant performance data, including sales, tips ratings and weather. 
     It identifies monthly dips in revenue and seasonal shifts helping uncover key operational insights.</p>
 
 <p>Built using Power BI Desktop with DAX measures, KPI cards and custom themes, this dashboard is optimized for 
@@ -62,46 +132,15 @@
 </section>
 
 
-<section>
-  <h2>Sample Visuals & Outputs</h2>
-   <h3> Figure 1: Regression modelling using RapidMiner </h3>
-  <img src="images/MLR rapidminer restaurant.png" alt="Restaurant analytics" />
-  <p> RapidMiner regression output showing holidays & temperature as key drivers.</p>
- 
-  <h3> Figure 2: Infographics of Customer Reviews using Napkin AI </h3>
-  <img src="images/Infographics review restaurant.jpg" alt="Restaurant analytics" />
+  <p><strong> View full code, SQL queries, and analysis on GitHub <a href="index.html" class="button"> GitHub</a> </strong><p>
+  
+  
 
-  <h3> Figure 3: Word Cloud using NLTK <h3>
-  <img src="images/wordcloud restaurant.png" alt="Restaurant analytics" />
-  <p>Sentiment-infused word cloud separating positive vs. negative customer themes.</p>
-
-  <h3> Figure 4: SQL Query to Calculate Average Evening Temperature (4 PM – 10 PM)</h3>
-  <img src="images/SQL restaurant proj.png" alt="Restaurant analytics" />
-  <p>Note: Restaurant operated only in evenings (4 pm to 10 pm)</p>
-</section>
 
 <section>
-  <h2>Key Insights Driving Recommendations</h2>
-  <ul>
-    <li><strong>Slow Thursdays:</strong> Lowest sales; recommended weekday lunch specials & event tie-ins.</li>
-    <li><strong>Weather sensitivity:</strong> Warm days + holidays spiked revenue; proposed outdoor seating promotion during warm seasons.</li>
-    <li>Negative customer sentiment grew after staff changes and linked to lower tips</li>
-    <li><strong>Staff sentiment link:</strong> Negative reviews post-staff change directly tied to tipping decline; 
-      advised service retraining + private QR feedback channel.</li>
-  </ul>
-  </section>
-  <section>
-  <h2>Business Impact Potential</h2>
-  <p> Projected 10–15% revenue uplift through targeted promotions, sentiment-driven feedback loops, and operational optimization, 
-    all achievable with minimal overhead for the owner.</p>
-
-</section>
-
-<section>
-  <h3>Conclusion</h3>
-  <p>Overall, this project strengthened my skills in data storytelling, model validation, 
-  and translating business problems into analytical solutions, while also reinforcing the power of analytics in small business decision-making.
-
+  <h2>Key Takeaway</h2>
+  <p>This project demonstrates how data analytics can transform 
+    small business decision-making by identifying revenue drivers, improving customer experience, and enabling predictive planning.
 </p>
 </section>
 

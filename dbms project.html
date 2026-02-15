@@ -10,46 +10,70 @@
 <body>
 <div class="container">
 <header>
-  <h1>Chemical Production Plant Management System</h1>
-  <p>A SQL-based database system for managing chemical production plant operations</p>
-</header>
-
-<p><strong>Course:</strong> COMP 230 – Databases and Database Management Systems <br>
-  
+  <h1>Chemical Production Plant Management System: SQL Database for Operations</h1>
+  <p><i>Capstone project simulating the design of a SQL-based database to manage chemical plant operations, showcasing relational modeling, SQL expertise, and operational reporting skills.</i></p>
+<!-- Tech Tags -->
+  <div class="tags">
+    <span class="tag">SQL</span>
+    <span class="tag">ERD</span>    
+  </div>
+</header>  
 
 <section>
-  <h2>Project Overview</h2>
+  <h2>Project Summary</h2>
   <p>
-    This project involved designing and implementing a relational database system to manage operations in a chemical production plant. 
-    The system streamlined production batch scheduling, raw material inventory tracking, customer order processing, and payment management.
-    Built to support roles like plant managers, QA, and inventory teams, this project showcased end-to-end DBMS skills.
+    Built a simulated SQL-based relational database system to manage operations in a chemical production plant, supporting roles like plant managers, 
+    QA teams, and inventory staff. The system automates production batch scheduling, raw material tracking, order processing, and payment management, 
+    demonstrating end-to-end database design and optimization skills.
   </p>
 </section>
 
 <section>
-  <h2>Tools & Techniques</h2>
+  <h2>Business Context</h2>
+  <p>Chemical production plants rely on accurate inventory, production, and order data. Without a structured database, managers face inefficiencies, 
+    errors in scheduling, and delays in customer order fulfillment. This simulated project demonstrates the ability to design systems that optimize operations and ensure data integrity, even in complex multi-entity environments.</p>
+</section>
+
+<section>
+  <h2>Problem Statement</h2>
+  <p>Design a database system that ensures data integrity, reduces redundancy, and provides managers and staff with reliable tools to monitor production, inventory, and customer orders efficiently.</p>
+</section>
+
+<section>
+  <h2>Tools & Methods</h2>
   <ul>
-    <li>MySQL Database</li>
-    <li>phpMyAdmin for database interface</li>
-    <li>SQL: Data Definition Language (DDL), Data Manipulation Language (DML) </li>
-    <li>Entity Relationship Diagram (ERD) and Normalization</li>
+    <li>Tools: MySQL, phpMyAdmin</li>
+    <li>Techniques: Relational Modeling, Normalization (2NF), Entity Relationship Diagram (ERD), 
+      DDL & DML, SQL Query Optimization, JOINs, GROUP BY, Subqueries, Aggregations</li>
   </ul>
 </section>
 
 <section>
-  <h2>Key Features</h2>
+  <h2>Key Features/Highlights</h2>
   <ul>
-    <li><strong>Normalized Schema Design:</strong> Created 10+ interrelated tables in 2NF with clear functional dependencies to reduce redundancy and ensure integrity.</li>
-    <li><strong>Entity Relationship Diagram:</strong> Mapped entities like Raw_Material, Supplier, Product, Order, Customer, and Payment using Chen’s notation.</li>
-    <li><strong>Relational Mapping:</strong> Used bridge tables (Product_Material, Order_Details) to model M:N relationships.</li>
-    <li><strong>DDL & Implementation: </strong>Built schema using MySQL and implemented all relationships with appropriate data types, constraints, and indexing for query efficiency.</li>
-    <li><strong>SQL Queries:</strong> Developed advanced queries using JOIN, GROUP BY, subqueries, and aggregation to generate reports on order status, raw material usage, and customer payments.</li>
+    <li><span><strong>Normalized Schema Design:</strong> Created 10+ interrelated tables in 2NF with clear functional dependencies to reduce redundancy and ensure integrity.</span></li>
+    <li><span><strong>Entity Relationship Diagram:</strong> Mapped entities like Raw_Material, Supplier, Product, Order, Customer, and Payment using Chen’s notation.</span></li>
+    <li><span><strong>Relational Mapping:</strong> Used bridge tables (Product_Material, Order_Details) to model M:N relationships.</span></li>
+    <li><span><strong>DDL & Implementation: </strong>Built schema using MySQL and implemented all relationships with appropriate data types, constraints, and indexing for query efficiency.</span></li>
+    <li><span><strong>SQL Queries:</strong> Developed advanced queries using JOIN, GROUP BY, subqueries, and aggregation to generate reports on order status, raw material usage, and customer payments.</span></li>
   </ul>
+</section>
+
+<section>
+  <h2>Business Impact</h2>
+  <p>While simulated, the project demonstrates the potential impact of a well-designed database system:</p>
+  <u1>
+  <li>Efficient tracking of production and inventory</li>
+  <li>Streamlined order processing and payment management</li>
+  <li>Reduced errors and improved operational decision-making</li>
+  </u1>
+
 </section>
 
 <section>
   <h2>Entity Relationship Diagram (ERD) Using Chen's Notation</h2>
-  <img src="images/ERD.png" alt="Inventory Database ER Diagram" />
+  <div class="image-box">
+  <img src="images/ERD.png" alt="Inventory Database ER Diagram" /></div>
   <p>ERD showing structured connections between products, orders, materials, suppliers, and employees.</p>
 </section>
 
@@ -78,7 +102,7 @@
   </section>
 
 <section>
-  <h2>Results & Outcomes</h2>
+  <h2>Key Takeaways</h2>
   
     <li>Achieved a fully operational MySQL-backed system for inventory control and production monitoring.</li>
     <li>Demonstrated real-world application of relational modeling, normalization, SQL optimization, and database design principles.</li>
