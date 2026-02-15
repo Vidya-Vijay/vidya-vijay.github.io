@@ -1,5 +1,5 @@
-/* =============================
-   Base & Reset
+/* ============================= 
+   RESET
 ============================= */
 * {
   margin: 0;
@@ -7,26 +7,33 @@
   box-sizing: border-box;
 }
 
+/* ============================= 
+   BODY
+============================= */
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #1c1c1c;
-  color: #111111;
+  background-color: #121212; /* dark background for whole page */
+  color: #eee;
   line-height: 1.6;
   font-size: 16px;
   padding: 20px;
 }
 
+/* ============================= 
+   MAIN CONTAINER
+============================= */
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  background-color: #ffffff;
-  padding: 30px 40px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  background: #1c1c1c; /* dark container */
+  color: #eee;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
-/* =============================
-   Header
+/* ============================= 
+   HEADER
 ============================= */
 header {
   text-align: center;
@@ -34,94 +41,240 @@ header {
 }
 
 header h1 {
+  font-size: 2.2rem;
   font-weight: 700;
-  font-size: 2.4rem;
-  color: #0f0002d9;
-  margin-bottom: 8px;
+  color: #ffb347; /* bright orange title */
 }
 
 header p {
+  margin-top: 8px;
   font-size: 1.1rem;
-  color: #080808;
-  font-weight: 500;
+  color: #ccc;
 }
 
-/* =============================
-   Section Titles
+/* ============================= 
+   TAGS (TECH STACK)
+============================= */
+.tags {
+  margin-top: 15px;
+}
+
+.tag {
+  display: inline-block;
+  background: #333;
+  color: #ffb347;
+  padding: 6px 14px;
+  margin: 5px 6px 0 0;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ============================= 
+   SECTION CARDS
+============================= */
+section {
+  background: #222; /* slightly lighter dark gray */
+  color: #eee;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border-left: 5px solid #ffb347; /* bright orange accent */
+  transition: all 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  
+}
+
+/* ============================= 
+   HEADINGS
 ============================= */
 h2 {
-  font-weight: 600;
-  color: #110a02;
-  border-bottom: 3px solid #131313;
-  padding-bottom: 6px;
-  margin-bottom: 18px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #ffb347; /* headings in bright orange */
+  position: relative;
 }
 
-/* =============================
-   Paragraphs & Lists
+/* subtle underline */
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ffb347;
+  margin-top: 6px;
+}
+
+/* ============================= 
+   TEXT
 ============================= */
 p {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
+  color: #ccc;
 }
 
+/* ============================= 
+   LISTS
+============================= */
 ul {
-  margin-left: 20px;
-  margin-bottom: 16px;
-  list-style-type: disc;
-  color:  #101010;
-}
-
-li strong {
-  color: #320101;
-}
-
-/* =============================
-   Images
-============================= */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 15px auto 20px auto;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-
-/* =============================
-   Buttons
-============================= */
-a.button {
-  display: inline-block;
-  padding: 10px 18px;
-  background-color:#110a02;
-  color: #efecec;
-  font-weight: 600;
-  border-radius: 5px;
-  text-decoration: none;
+  list-style: none;
   margin-top: 10px;
+}
+
+li {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+/* custom bullet */
+li::before {
+  content: "•";
+  color: #ffb347;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* ============================= 
+   STRONG TEXT
+============================= */
+strong {
+  color: #ffb347;
+}
+
+/* ============================= 
+   HIGHLIGHT SECTIONS
+============================= */
+.highlight {
+  background: #333; /* dark gray highlight */
+  color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 5px solid #ffb347;
+}
+
+.highlight li::before {
+  color: #ffb347;
+}
+
+.highlight strong {
+  color: #ffb347;
+}
+
+/* ============================= 
+   METRIC CARDS
+============================= */
+.metrics {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.metric {
+  flex: 1;
+  min-width: 120px;
+  background: #333;
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
   text-align: center;
 }
 
-a.button:hover {
-  background-color: #e67e00;
-  cursor: pointer;
+.metric h3 {
+  font-size: 1.6rem;
+  color: #ffb347;
 }
 
-/* =============================
-   Responsive
+.metric p {
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* ============================= 
+   IMAGE CONTAINER
 ============================= */
-@media (max-width: 600px) {
+.image-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #222;
+  border-radius: 10px;
+  border: 1px solid #444;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.03); /* slight zoom */
+}
+
+
+
+.img-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 8px;
+}
+
+/* ============================= 
+   BUTTONS
+============================= */
+a.button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #333;
+  color: #ffb347;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 10px 10px 0 0;
+  transition: all 0.2s ease;
+}
+
+a.button:hover {
+  background: #ffb347;
+  color: #1c1c1c;
+  transform: translateY(-1px);
+}
+
+/* ============================= 
+   DIVIDER SPACING
+============================= */
+section + section {
+  margin-top: 20px;
+}
+
+/* ============================= 
+   RESPONSIVE
+============================= */
+@media (max-width: 768px) {
+
   .container {
-    padding: 20px;
+    padding: 25px;
   }
 
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   h2 {
     font-size: 1.3rem;
+  }
+
+  .metrics {
+    flex-direction: column;
   }
 }
