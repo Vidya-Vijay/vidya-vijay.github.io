@@ -10,6 +10,10 @@
 <body>
 <div class="container">
 <header>
+  <div class="header-buttons">
+    <a href="index.html" class="button left-button">← Back to Portfolio</a>
+    <a href="https://github.com/Vidya-Vijay/Netflix-Viewership-Analysis" class="button right-button" target="_blank">View on GitHub →</a>
+  </div>
   
   <h1>Netflix Viewership Analysis: Driving Data-Informed Content Strategy</h1>
   <p><i>Statistical insights into factors influencing Netflix viewer engagement, supporting better content recommendations and audience targeting.</i></p>
@@ -19,8 +23,9 @@
   <div class="tags">
     <span class="tag">SPSS</span>
     <span class="tag">Tableau</span>
-    <span class="tag">Staistics</span>
+    <span class="tag">Statistics</span>
     <span class="tag">Regression</span>
+    <span class="tag">ANOVA</span>
    
   </div>
 </header>
@@ -34,19 +39,12 @@
   </p>
 </section>
 
-<section>
+<section class = "highlight">
   <h2>Business Context</h2>
   <p>
     Streaming platforms like Netflix need to optimize content promotion and acquisition. 
     Understanding which factors drive viewership helps improve recommendations, increase engagement, and allocate marketing resources effectively.
-  </p>
-</section>
-
-<section>
-  <h2>Problem Statement</h2>
-  <p>
-    Determine key drivers of Netflix content viewership, quantify their impact, and provide actionable recommendations to enhance engagement and guide content strategy.
-    
+    The aim was to determine key drivers of Netflix content viewership, quantify their impact, and provide actionable recommendations to enhance engagement and guide content strategy.
   </p>
 </section>
 
@@ -55,8 +53,7 @@
   <ul>
     <li>Netflix viewership data (6 months, 240 titles)</li>
     <li>IMDb ratings, award wins and nominations</li>
-    <li>Global availability & metadata from Wikipedia</li>
-   
+    <li>Global availability & metadata from Wikipedia</li>   
   </ul>
 </section>
 
@@ -81,16 +78,44 @@
 
  <section>
   <h2>Key Insights</h2>
-  <ul>
-    <p><strong>Regression Analysis:</strong></p>
+  <div class="metrics">
+    <div class="metric">
+      <h3>33.9%</h3>
+      <p>R-squared</p>
+    </div> 
+
+    <div class="metric">
+      <h3>0.582</h3>
+      <p>Correlation</p>
+    </div> 
+
+    <div class="metric">
+      <h3>10.528</h3>
+      <p>F-statistics</p>
+    </div> 
+
+    <div class="metric">
+      <h3> &lt 0.001 </h3>
+      <p>p-value</p>
+    </div> 
+  </div>
+
+
+
+ <p><strong>Regression Analysis:</strong></p>
+  <ul>    
     <li>Positive drivers: IMDb rating, award nominations</li>   
     <li>Type and genre significantly influence viewership</li>
     <li>R² = 0.339 → other factors also play a role</li>
-    <li>Residual diagnostics indicated heteroscedasticity and outliers</li>
+    <li>Residual diagnostics indicated heteroscedasticity and outliers</li> 
+  </ul>
     <p><strong>ANOVA:</strong></p>
+  <ul>
     <li>Action is the most-watched genre; Anime the least</li>
     <li>Genre significantly affects viewership averages</li>
+  </ul>
     <p><strong>Two-Way ANOVA:</strong></p>
+    <ul>
     <li>Type × Genre interaction is significant: Movies outperform series in the sample</li>
     <li>Engagement depends on content combination, not just individual attributes</li>
   </ul>
@@ -98,10 +123,12 @@
 
 <section>
   <h2>Business Recommendations</h2>
-  <li>Promote high-engagement genres like Action and Thriller in recommendations</li>
-  <li>Support underperforming genres (Anime, Comedy) with targeted campaigns or cross-genre content</li>
-  <li>Leverage award nominations & ratings to highlight content that drives viewer engagement</li>
-  <li>Optimize type/genre combination for content placement in the recommendation engine</li>
+  <ul>
+    <li>Promote high-engagement genres like Action and Thriller in recommendations</li>
+    <li>Support underperforming genres (Anime, Comedy) with targeted campaigns or cross-genre content</li>
+    <li>Leverage award nominations & ratings to highlight content that drives viewer engagement</li>
+    <li>Optimize type/genre combination for content placement in the recommendation engine</li>
+  </ul>
 </section>
 
 <section>
@@ -114,13 +141,13 @@
   </p> 
   <p>This project strengthened my skills in statistical modeling, diagnostic test interpretation, 
     and multivariate analysis. It provided hands-on experience in evaluating interaction effects and translating statistical results 
-    into actionable business insights. Through this analysis, I developed a deeper understanding of audience segmentation and data-driven content strategy optimization in the streaming industry.
-
+    into actionable business insights. Through this analysis, I developed a deeper understanding of audience segmentation and 
+    data-driven content strategy optimization in the streaming industry.
   </p>
-  </section>   
+</section>  
+
 <section>
-  <h2>Key Visuals</h2>
-  <h3>Figure 1: Tableau Dashboard </h3>
+  <h2>Netflix Analysis Dashboard</h2>  
   <div class="image-box">
    <img src= "images/netflixtableau.png"  alt="Netflix Viewership Dashboard" />
   </div>
@@ -143,7 +170,7 @@
 
 </p>
 </section>
-
+<p><strong> View full analysis on <a href="https://github.com/Vidya-Vijay/Netflix-Viewership-Analysis" class="button"> GitHub</a> </strong></p>
 
 
 <a href="index.html" class="button">← Back</a>
