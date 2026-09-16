@@ -30,107 +30,224 @@
 
 
 <section>
-  <h2>Project Summary</h2>
+  <h2>Project Overview</h2>
   <p>
-   Partnered with a local Thai restaurant in Abbotsford experiencing declining revenue and customer satisfaction. 
-   Conducted an end-to-end analysis using sales, weather, and customer review data to identify key performance drivers and 
-   recommend actionable strategies to improve business outcomes.
+   A family-owned Thai restaurant in Abbotsford was experiencing declining sales and customer engagement. 
+   The business had limited visibility into the factors influencing daily revenue and customer satisfaction, making operational decisions largely 
+   dependent on experience and intuition.
+  </p>
+  <p>
+    Working as part of a Business Analytics project team, 
+    I conducted an end-to-end analysis combining restaurant sales, weather, calendar, tipping, and Google review data.
+  </p>
+  <p>
+    The objective was to identify the factors associated with revenue performance and customer experience, 
+    then translate those findings into practical recommendations for promotions, staffing, inventory planning, and service improvement.
   </p>
 </section>
 
 <section class = "highlight">
-  <h2>Business Context</h2>
+  <h2>Business Problem</h2>
   <p>
-   The restaurant faced inconsistent daily revenue, declining customer satisfaction, and limited visibility into the factors 
-   influencing sales performance. Without structured analysis, decision-making relied heavily on intuition rather than data.
-   The aim is to identify the key drivers of revenue and customer experience, and develop data-driven strategies to increase sales, 
-   improve customer satisfaction, and optimize operations.
+   The analysis focused on five business questions:
+  </p>
+  <ul>
+  <li>Which days consistently generate the strongest and weakest sales?</li>
+  <li>How are temperature and holidays associated with daily revenue?</li>
+  <li>Can historical data be used to forecast daily sales?</li>
+  <li>What does customer feedback reveal about satisfaction and service quality?</li>
+  <li>How can these insights support better operational decisions?</li>
+  </ul>
+</section>
+
+<section class = "highlight">
+<h2>Data Sources</h2>
+<ul>
+  <li><strong>10 months of POS (Point of sales) data</strong> <br>
+    Cleaned daily restaurant sales records from October 2023 to September 2024.</li>
+  <li><strong>400+ Google reviews</strong> <br>
+    Google customer reviews used for sentiment and text analysis.</li>
+  <li><strong>Weather Data</strong> <br>
+    Average evening temperature between 4 PM and 10 PM, aligned with restaurant operating hours.</li>   
+  <li><strong>Calendar Data</strong> <br>
+    Day-of-week, holiday, and seasonal variables used to analyze demand patterns.</li>
+</ul>
+<p>The original POS data contained aggregated daily food, beverage, tax, and tip information. Non-operational days with zero sales were removed, 
+  resulting in a final analytical dataset of <strong>313 daily records.</strong></p>
+</section>
+
+<section class = "highlight">
+  <h2>Analytics Workflow</h2>
+<strong>Business Problem → Data Collection → Data Cleaning & Integration → Exploratory Analysis → Predictive Modeling → 
+Sentiment Analysis → Dashboard → Business Recommendations</strong>
+</section>
+
+<section class = "highlight">
+  <h2>Tools & Methods</h2>
+  <ul>
+    <li><span><strong>SQL & Python (Pandas) </strong>: 
+      Integrated sales, weather, and calendar information using date and time transformations.</span> </li>
+    <li><span><strong>Power BI (DAX) </strong>:
+      Developed interactive dashboards for sales, tips, ratings, weather, and performance trends.</span> </li>
+    <li><span><strong>Regression Modeling using RapidMiner </strong>:
+      Built and evaluated a multiple linear regression model for daily sales forecasting.</span> </li>
+    <li><span><strong>Python NLP & Sentiment Analysis (NLTK) </strong>:
+     Processed customer reviews and performed sentiment analysis.</span> </li>      
+      <li><span><strong>Statistical Analysis</strong>:
+      Used exploratory analysis, regression coefficients, RMSE, correlation analysis, and trend analysis to evaluate business performance.
+    </span></li>
+    </ul>
+</section>
+
+<section class = "highlight">
+  <h2>Exploratory Data Analysis</h2>
+  <h3> Revenue Varied Significantly by Day of Week</h3>
+  <p> Day-of-week analysis revealed a substantial difference between the restaurant's strongest and weakest days. <br>
+    <strong>Sunday — $778.22 average daily sales</strong> <br>
+    <strong>Thursday — $309.25 average daily sales</strong> <br>
+    Thursday therefore generated approximately 60% lower average sales than Sunday, highlighting a clear weekday demand gap.
+  </p>
+  
+  <p><h3>Business Implication</h3>
+    Rather than applying promotions across every day, management could test targeted Thursday offers or events and measure 
+    whether they improve traffic and revenue.</p>
+</section>
+
+<section class = "highlight">
+  <h2>Predictive Sales Modeling</h2>
+  <p>A Multiple Linear Regression model was developed to estimate daily sales using:</p>
+  <ul>
+    <li>Day of week</li>
+    <li>Average evening temperature</li>
+    <li>Holiday status</li>    
+  </ul> 
+  <p>Sunday was used as the reference day and non-holiday as the reference holiday category.</p> 
+  </section>
+
+  <section class="highlight">
+
+  <h2>Model</h2>
+  <p><strong>Daily Sales = 664.5 + 8.63(Temperature) − 375.4(Monday) − 395.8(Tuesday) − 317.4(Wednesday) − 446.2(Thursday) − 217.4(Friday) − 
+    195.0(Saturday) + 364.6(Holiday)</strong></p>
+    <p>The model acheived <strong> RMSE: 276.99</strong> with reported variability of approximately <strong>
+      ±118.49 </strong> across evaluation results.</p>
+      </section>
+
+
+<section class = "highlight">
+  <h2>What the Model Revealed</h2>
+  <h3>1. Thursday Was the Strongest Negative Day Effect</h3>
+  <p>Holding the other model variables constant, Thursday had a coefficient of approximately <strong> −$446 </strong>
+  relative to Sunday. This supported the exploratory finding that Thursday represented a significant demand weakness.</p> <br>
+
+<h3>2. Holidays Were Associated With Higher Sales</h3>
+<p>Holiday status had an estimated coefficient of approximately <strong>$365</strong> relative to non-holiday days,
+  holding the other variables constant.This suggests holidays represented an important demand opportunity for the restaurant.</p> <br>
+
+<h3>3. Temperature Had a Positive Association With Sales</h3>  
+<p>The model estimated a temperature coefficient of approximately <strong>$8.63 per 1°C</strong> holding the other variables constant. 
+  The regression results therefore supported using weather forecasts as one input when planning restaurant operations and promotions.</p> <br>
+
+
+<h3>4. Customer Sentiment Analysis</h3>
+<p>To understand customer experience beyond numerical sales data, 400+ Google reviews were analyzed using Python, NLTK, and VADER.
+  Sentiment scores were calculated from review text and compared with tipping patterns.
+</p>
+<p><strong>Positive Customer Language</strong>: Frequently occurring positive terms included <strong>“delicious”, “friendly”, “great”</strong>
+  </p>
+  <p><strong>Negative Customer Language</strong>: Negative reviews included terms such as <strong>“disappointed”, “messed”,  “hard”</strong>
+  </p>
+  <p>The text analysis helped surface recurring customer-experience themes that could not be identified through sales data alone.</p> <br>
+
+<h3>5. Sentiment vs. Tipping</h3>
+<p>The relationship between customer sentiment and tipping was more complex than expected. The raw relationship showed 
+  a weak positive correlation of <strong> r = 0.210. </strong> </p>
+  <p>However, after comparing seven-day rolling averages, the relationship became negative,<strong> r = −0.294. </strong>
+    Later periods also contained high-tip days without corresponding increases in review sentiment. </p>
+</section>
+
+<section class = "highlight">
+  <h2>Key Interpretation</h2>
+  <p>Customer sentiment and tipping showed an inconsistent relationship over time. <br>
+Therefore, tipping should not be treated as a direct proxy for customer satisfaction. 
+Review timing, review volume, service conditions, and other unobserved factors may also influence the relationship.
   </p>
 </section>
 
-<section>
-<h2>Data Sources</h2>
+   <section class = "highlight">
+    <h2>Business Recommendations</h2>
+  <h3>1. Target the Thursday Revenue Gap</h3>
+  <ul> 
+    <li>Test Thursday-specific promotions, limited-time menu offers, or small events instead of discounting across already strong periods.</li>
+    <li>Measure performance before and after each intervention to determine whether the promotion produces incremental revenue.</li>
+</ul>
+
+<h3>2. Use Holidays as Demand Opportunities</h3>
 <ul>
-  <li>10 months of POS (Point of sales) data</li>
-  <li>400+ Google reviews</li>
-  <li>Weather and calendar data (holidays, temperature)</li>   
+  <li>Plan holiday-specific promotions and adjust staffing and inventory when stronger demand is anticipated.</li>
+</ul>
+
+<h3>3. Incorporate Weather Into Planning</h3>
+<ul><li>Use short-term weather forecasts alongside historical demand patterns when making staffing, inventory, and suitable 
+  seasonal promotion decisions.
+</li></ul>
+
+
+<h3>4. Improve Service Consistency</h3>
+<ul>
+  <li>Customer review analysis revealed recurring service-related concerns.</li>
+  <li>Introduce short staff briefings, clearer operating procedures, and structured customer-feedback mechanisms 
+    to identify recurring problems earlier.</li>
+  </ul>
+
+<h3>5. Introduce Structured Customer Feedback</h3>  
+<ul>
+  <li>Use QR-based surveys or similar feedback channels to collect customer 
+    experience information consistently rather than relying solely on public reviews.</li>
+</ul>
+
+<h3>6. Connect Forecasts With Operations</h3>
+<ul>
+  <li>Use predicted demand as one input when planning Staffing, Inventory, Promotions, and Scheduling.</li>
+  <li>This can help management align operational resources with expected demand.</li>
 </ul>
 </section>
-
-<section>
-  <h2>Tools & Methods</h2>
-  <ul>
-    <li><span><strong>SQL & Python (Pandas) </strong>- Data cleaning and integration</span> </li>
-    <li><span><strong>Power BI (DAX) </strong> - Interactive dashboard development</span> </li>
-    <li><span><strong>Regression Modeling </strong> -  Revenue prediction</span> </li>
-    <li><span><strong>NLP & Sentiment Analysis (NLTK) </strong> - Customer feedback analysis</span> </li>
-      </ul>
-</section>
-
-<section>
-<h2>Approach</h2>
-<ul>
-  <li>Merged structured and unstructured data sources to create a unified dataset</li>
-  <li>Performed exploratory data analysis to identify trends and anomalies</li>
-  <li>Built a multiple linear regression model to predict daily revenue based on external factors</li>   
-  <li>Analyzed customer sentiment to understand service quality issues</li>   
-  <li>Designed an interactive dashboard to support real-time decision-making</li>
-</ul>
-</section>
-
-<section>
-  <h2>Key Insights</h2>
-  <ul>
-    <li><span><strong>Revenue was highly influenced by external factors,</strong> 
-      with warmer temperatures and holidays significantly increasing sales.</span></li>
-    <li><span><strong>Thursdays consistently underperformed,</strong> indicating untapped demand during weekdays.</span></li>
-    <li><span>Positive reviews highlighted <strong>“friendly service” and “food quality” </strong>as key loyalty drivers.</span></li>
-    <li><span><strong>Negative feedback frequently mentioned service issues,</strong> indicating operational gaps</span></li>
-  </ul>
-  </section>
-
-  <section>
-  <h2>Business Recommendations</h2>
-  <section class = "highlight">
-  <ul>
-    <li><strong>Increase Weekday Revenue</strong>: Introduce targeted promotions and events to boost low-performing days (e.g., Thursdays)</li>
-    <li><strong>Leverage Weather-Based Demand</strong>:  Implement outdoor seating or seasonal promotions during high-temperature periods</li>
-    <li><strong>Improve Service Quality</strong>: Provide staff retraining and introduce feedback systems (e.g., QR-based surveys) </li>
-    <li><strong>Enhance Customer Experience </strong>: Focus on service consistency, as it directly impacts tipping behavior and satisfaction </li>
-    <li><strong>Use Predictive Insights for Planning</strong>: Apply revenue forecasts to optimize staffing and inventory decisions </li>
-    </ul> 
-  <h2>Business Impact</h2>
- <p>The proposed strategies could:</p>  
-  <ul>    
-    <li><span>Increase revenue by <strong>10–15%</strong> </span></li>
-    <li>Improve customer satisfaction and retention</li>
-    <li>Reduce operational inefficiencies through data-driven planning</li>    
-  </ul>
-  </section>
   
-  </section>
-
-
-
 <section>
   <h2>Restaurant Sales Performance Dashboard Using Power BI</h2>
+  <p>This interactive Power BI dashboard consolidated restaurant performance into an executive-level view covering: <br> 
+  <strong>Total Sales • Total Tips • Average Daily Sales • Tip Percentage • Customer Ratings • Weekly Sales • 
+  Day-of-Week Performance • Weather Trends </strong></p>
+
+<p>The dashboard was designed to translate detailed analytical results into information that restaurant 
+  management could quickly interpret and use for operational decisions.</p>
   <div class="image-box">
   <img src="images/RestaurantDashboard.png" alt="Restaurant Dashboard Preview" /></div>
 
-  <p>This interactive Power BI dashboard analyzes 10 months of restaurant performance data, including sales, tips ratings and weather. 
-    It identifies monthly dips in revenue and seasonal shifts helping uncover key operational insights.</p>
-
-<p>Built using Power BI Desktop with DAX measures, KPI cards and custom themes, this dashboard is optimized for 
-  executive review with a warm, culturally inspired design that supports storytelling and decision-making.</p>
+  
 </section>
 
+<section >
+  <h2>Limitations & Next Steps</h2>
+
+<p> The analysis also identified important limitations.</p>
+<p> The available POS data contained aggregated daily sales rather than item-level transactions. 
+  As a result, the project could not perform detailed menu engineering or product-level profitability analysis.</p>
+
+  <p> The model also did not include factors such as Competitor activity, Local events, Tourism,
+    Detailed customer traffic, and Item-level transactions.</p>
+  <p>A future version of the project could incorporate these variables, 
+    compare multiple forecasting algorithms, and evaluate model performance using additional validation metrics.</p>
+</section>
 
 
 <section>
   <h2>Key Takeaway</h2>
-  <p>This project demonstrates how data analytics can transform 
-    small business decision-making by identifying revenue drivers, improving customer experience, and enabling predictive planning.
+  <p>This project demonstrates an end-to-end business analytics workflow combining SQL-based data integration, 
+    exploratory analysis, regression modeling, NLP sentiment analysis, and Tableau dashboarding..
 </p>
+<p>Rather than analyzing sales in isolation, the project connected operational performance with weather, calendar effects, tipping behavior, 
+  and customer feedback to identify actionable opportunities in weekday demand, staffing, inventory planning, promotions, and service quality.</p>
 </section>
 
 <p><strong> View full code, SQL queries, and analysis on <a href="https://github.com/Vidya-Vijay/Restaurant-Sales-Analytics" class="button"> GitHub</a> </strong></p>
